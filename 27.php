@@ -10,6 +10,7 @@ $colors = array(
         'brown',
         'green',
 );
+$cntColors = count($colors);
 ?>
 
 <table ellspacing="0" border="1" >
@@ -19,7 +20,7 @@ $colors = array(
             <?php
             for ($j=0;$j<$cols;$j++){
                 $value = rand();
-                $color =$colors[rand(0,6)];
+                $color =$colors[rand(0,($cntColors - 1))];
                 ?>
                 <td style="background-color:<?php echo $color;?>"><?php echo $value;?></td>
             <?php }?>
